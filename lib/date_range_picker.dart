@@ -1149,19 +1149,17 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
         child: _buildPicker(),
       ),
     );
-    final Widget actions = new ButtonTheme.bar(
-      child: new ButtonBar(
-        children: <Widget>[
-          new FlatButton(
-            child: new Text(localizations.cancelButtonLabel),
-            onPressed: _handleCancel,
-          ),
-          new FlatButton(
-            child: new Text(localizations.okButtonLabel),
-            onPressed: _handleOk,
-          ),
-        ],
-      ),
+    final Widget actions = new ButtonBar(
+      children: <Widget>[
+        new FlatButton(
+          child: new Text(localizations.cancelButtonLabel),
+          onPressed: _handleCancel,
+        ),
+        new FlatButton(
+          child: new Text(localizations.okButtonLabel),
+          onPressed: _handleOk,
+        ),
+      ],
     );
     final Dialog dialog = new Dialog(child: new OrientationBuilder(
         builder: (BuildContext context, Orientation orientation) {
